@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		请输入您的名字：<input type="text" id="username">*<br><br>
+		<img src="./0.png" alt="">
+		<p>欢迎访问！</p>
+	<script type="text/javascript">
+		//是中文名,则绿色,否则红色
+		document.getElementById("username").onblur=function(){
+			var reg=/^[\u4e00-\u9fa5]{2,6}$/;
+			// var reg=/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$//邮箱/;
+			if(reg.test(this.value)){
+				this.style.backgroundColor="yellow";
+				
+			}else{
+				this.style.backgroundColor="pink";
+			}
+				
+		}
+	</script>	
+	</body>
+</html>
